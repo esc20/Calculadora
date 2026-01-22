@@ -78,19 +78,18 @@ nav#menu a:hover {
     color: var(--texto);
 }
 
-button#edit {
+button.edit {
    font-size: 20px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    background-color: var(--fundo-card);
    transition: background-color 0.3s, color 0.3s;
 }
 
-button#edit:hover {
+button.edit:hover {
     background-color: var(--fundo-body);
     color: rgba(102, 102, 102, 0.322);
     cursor: pointer;
 }
-
 
 
 .fa-calculator {
@@ -104,50 +103,40 @@ button#edit:hover {
 .fa-sun {
     font-size: 25px;
 }
-
 .calculadora {
-    display: grid;
-    /* Define 6 colunas de tamanhos iguais */
-    grid-template-columns: repeat(6, 1fr); 
-    gap: 10px; /* Espaço entre os botões */
-    padding-left: 30%;
-    background-color: var(--fundo-card);
-    border-radius: 15px;
-    
+    width: 60vw;
+    margin: 60px auto;
 }
 
+
 #display {
-    grid-area: 1 / 1 / 2 / 7;
+    width: 100%;
     background-color: var(--destaque);
     border-radius: 10px;
-    font-size: 24px;
-    margin-bottom: 10px;
     padding: 15px;
-    margin-top: 50px;
-    width: 574px;
-    height: 110px;
-    position: absolute;
-    border: none;
-    text-align: right;
-    color: black;
-    outline: none;
     font-size: 50px;
+    text-align: right;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 .teclado {
     display: grid;
-    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.2fr;
-    border: solid 2.5px black;
+    grid-template-columns: repeat(5, 1fr) 1.2fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+
     background-color: var(--fundo-calculadora);
-    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.164);
+    padding: 20px;
     border-radius: 10px;
-    color: white;
-    width: 44vw;
-    height: 99vh;
-    margin: 50px auto;
+    border: solid 2.5px black;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.164);
 }
 
+.edit {
+    width: 100%;
+    height: 60px;
+}
 
 .numero-9 {
     grid-area: 2 / 5 / 2 / 6;
@@ -227,6 +216,7 @@ button#edit:hover {
 .AC {
     grid-area: 2 / 2 / 3 /3;
     border-radius: 10px;
+
 }
 
 .parenteses-esquerdo {
@@ -250,9 +240,9 @@ button#edit:hover {
 }
 
 
-.barra-lateral {
+.backspace {
     grid-area: 2 / 1 / 6 / 2;
-    background-color: var(--texto-inverso);
+    font-size: 25px;
     border-radius: 8px;
 }
 

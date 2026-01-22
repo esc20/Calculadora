@@ -1,13 +1,13 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
-// Persistência do tema
+// --- PERSISTÊNCIA DO TEMA ---
 const temasalvo = localStorage.getItem('tema');
+// Inicializa o tema baseado no localStorage
 temaEscuro(temasalvo === 'escuro');
 
-//Função para alterar entre tema claro e escuro
 function temaEscuro(tipo) {
-    if (tipo == true) {
+    if (tipo) { // Simplificado: if(tipo) já checa se é true
         body.classList.add('escuro');
         botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
     } else {
@@ -22,12 +22,34 @@ botao.addEventListener('click', () => {
     localStorage.setItem('tema', isescuro ? 'escuro' : 'claro');
 });
 
- //Função para o uso dos botões no display
+// --- LÓGICA DA CALCULADORA ---
 const display = document.querySelector('#display');
-const botoes = document.querySelectorAll('#edit');
+const botoes = document.querySelectorAll('.edit');
 
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
-        display.value += botao.innerText;
+        // CORREÇÃO: Verificar se o botão clicado NÃO é uma função de controle
+        // Isso evita que apareça "AC" ou "⌫" escrito no visor
+        const isControle = botao.classList.contains('backspace') || botao.classList.contains('AC');
+        
+        if (!isControle) {
+            display.value += botao.innerText;
+        }
     });
 });
+
+// Backspace //
+const btnApagar = document.querySelector('.backspace');
+if (btnApagar) { // Verificação de segurança
+    btnApagar.addEventListener('click', () => {
+        display.value = display.value.slice(0, -1);
+    });
+}
+
+/// AC ///
+const btnLimpar = document.querySelector('.AC');
+if (btnLimpar) { // Verificação de segurança
+    btnLimpar.addEventListener('click', () => {
+        display.value = '';
+    });
+}
