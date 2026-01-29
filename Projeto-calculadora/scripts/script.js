@@ -38,6 +38,53 @@ botoes.forEach(botao => {
     });
 });
 
+//Botão Igual//
+const btnIgual = document.querySelector('.igual');
+
+if (btnIgual && display) {
+    btnIgual.addEventListener('click', (e) => {
+        // O "Pulo do Gato": impede que qualquer outro código imprima o "=" no visor
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        try {
+            // 1. Captura o texto do visor (input ou div)
+            let expressao = (display.value || display.innerText || "").trim();
+
+            // 2. Limpeza Premium:
+            // - Remove o símbolo "=" se ele tiver "vazado" para o visor
+            // - Troca "X" ou "x" por "*" (multiplicação)
+            // - Troca "," por "." (decimal)
+            // - Remove qualquer sinal (+, -, *, /) que tenha ficado solto no final
+            let contaProcessada = expressao
+                .replace(/=/g, "")
+                .replace(/X/g, "*")
+                .replace(/x/g, "*")
+                .replace(/,/g, ".")
+                .replace(/[+\-*/]$/, "");
+
+            // 3. Se o visor estiver vazio após a limpeza, não faz nada
+            if (!contaProcessada) return;
+
+            // 4. Executa o cálculo
+            const resultadoFinal = eval(contaProcessada);
+
+            // 5. Exibição: Substitui a conta pelo resultado (usa "=" e não "+=")
+            if (display.tagName === 'INPUT') {
+                display.value = resultadoFinal;
+            } else {
+                display.innerText = resultadoFinal;
+            }
+
+        } catch (erro) {
+            console.error("Falha na conta:", erro);
+            // Em caso de erro matemático, mostra a mensagem
+            if (display.tagName === 'INPUT') display.value = "Erro";
+            else display.innerText = "Erro";
+        }
+    });
+}
+
 // Backspace //
 const btnApagar = document.querySelector('.backspace');
 if (btnApagar) { // Verificação de segurança
@@ -53,3 +100,21 @@ if (btnLimpar) { // Verificação de segurança
         display.value = '';
     });
 }
+//Soma//
+const btnSoma = document.querySelector('.adicao');
+let soma = 0;
+ if(btnSoma) {
+    btnSoma.addEventListener('click', ()=> {
+        const ultimoChar = display.value.slice(-1);
+        const sinais = ['+', '-', '*', '/'];
+        
+        if(display.value != "" && !sinais.includes(ultimoChar)) {
+            display.value += "+";
+        }
+    });
+}
+
+
+
+
+

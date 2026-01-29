@@ -14,10 +14,13 @@
     --fundo-body: #f3f2f1;
     --texto: #222222;
     --texto-display: rgb(202, 201, 201);
-    --texto-teclas: rgb(226, 226, 226);
+    --texto-teclas: #222222;
     --display: #1e272e;
     --fundo-menu-superior: #c3fdd4;
     --teclas: rgb(226, 226, 226);
+    --tecla-Igual: rgb(180, 252, 180);
+    --icones: rgb(33, 37, 53);
+    --sinais-numericos: rgb(180, 219, 180);
     
 }
 
@@ -28,13 +31,16 @@ body {
 }
 
 body.escuro {
-    --fundo-body: rgb(63, 63, 63);
-    --texto: white;
-    --texto-inverso: rgb(31, 30, 30);
-    --destaque: rgb(230, 229, 229);
-    --fundo-menu-superior: black;
-    --fundo-card: rgb(185, 182, 182);
-    --fundo-calculadora: rgb(63, 63, 63);
+    --fundo-body: #121211;          
+    --texto: #f5f5f0;               
+    --texto-display: #e0d7c6;        
+    --texto-teclas: #f5f5f0;         
+    --display: #1c1c1a;              
+    --fundo-menu-superior: #2b2621;  
+    --teclas: #262624;               
+    --tecla-Igual: #4a3f35;          
+    --icones: #99620f;               
+    --sinais-numericos: #8f7855;
 }
 
 header {
@@ -80,6 +86,7 @@ button.edit {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: var(--teclas);
+    color: var(--texto-teclas);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -91,14 +98,17 @@ button.edit:hover {
 }
 
 .fa-calculator {
+    color: var(--icones);
     font-size: 25px;
 }
 
 .fa-moon {
+    color: var(--icones);
     font-size: 25px;
 }
 
 .fa-sun {
+    color: var(--icones);
     font-size: 25px;
 }
 
@@ -126,12 +136,38 @@ button.edit:hover {
     grid-area: 1 / 1 / 2 / 7;
 }
 
-.teclado {
+#teclado {
     display: grid;
     grid-template-rows: repeat(5, 80px);
     grid-template-columns: repeat(4, 80px);
+    grid-area: 2 / 1 / 7 / 7;
     width: 90vw;
     column-gap: 5px;
+
+    border: none !important; 
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.escuro .edit{
+    border-radius: 5px;
+    border: 1px solid rgba(143, 120, 85, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.escuro .edit:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); 
+    transform: translateY(2px); 
+    border-top: 1px solid transparent; 
+}
+
+.escuro .sinais-numericos {
+   background-color: var(--sinais-numericos);
+}
+
+.escuro .operacao {
+  background-color: var(--tecla-Igual);
 }
 
 .numero-9 {
@@ -238,7 +274,7 @@ button.edit:hover {
 .backspace {
     grid-area: 1 / 1 / 1 / 1;
     font-size: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 #rodape {
@@ -288,7 +324,7 @@ button.edit:hover {
         grid-area: 1 / 1 / 2 / 7;
     }
 
-    .teclado {
+    #teclado {
         display: grid;
         grid-template-rows: repeat(5, 100px);
         grid-template-columns: repeat(6, 100px);
@@ -298,7 +334,6 @@ button.edit:hover {
     .edit {
         width: 100%;
         height: 80px;
-
     }
 
     #rodape {
@@ -307,5 +342,6 @@ button.edit:hover {
     background-color: var(--fundo-menu-superior);
 
 }
+    
 
 }

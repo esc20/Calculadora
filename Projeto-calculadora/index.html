@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/96e8f2bcbc.js" crossorigin="anonymous"></script>
     <title>Calculadora</title>
 </head>
-<body>
+<body class="escuro">
     <header>
         <nav id="menu">
             <ul>
@@ -22,7 +22,7 @@
             <!--/// VISOR ///-->
          <input type="text" id="display" readonly placeholder="0">
             <!--/// NUMEROS ///-->
-        <div class="teclado">    
+        <div id="teclado">    
         <button class="edit numero-9">9</button>
         <button class="edit numero-8">8</button>
         <button class="edit numero-7">7</button>
@@ -36,15 +36,15 @@
            <!--/// FIM DOS NUMEROS ///-->
            <!--/// SINAIS NUMERICOS ///-->
         <button class="edit virgula">,</button>
-        <button class="edit adicao">+</button>
-        <button class="edit subtracao">-</button>
-        <button class="edit multiplicacao">X</button>
-        <button class="edit divisao">/</button>  
+        <button class="edit adicao operacao">+</button>
+        <button class="edit subtracao operacao">-</button>
+        <button class="edit multiplicacao operacao">X</button>
+        <button class="edit divisao operacao">/</button>  
         <button class="edit AC">AC</button>
         <button class="edit parenteses-esquerdo">(</button>
         <button class="edit parenteses-direito">)</button>
         <button class="edit porcento">%</button> 
-        <button class="edit igual">=</button>
+        <button class="edit igual operacao">=</button>
         <button class="edit backspace">&#9003;</button>
         </div>
         <!--FIM DOS SINAIS NUMERICOS-->
