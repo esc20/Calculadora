@@ -114,6 +114,34 @@ let soma = 0;
     });
 }
 
+// Subtração //
+const btnSubtracao = document.querySelector('.subtracao');
+let subtracao = 0;
+if(btnSubtracao) {
+    btnSubtracao.addEventListener('click', ()=> {
+        const ultimoChar = display.value.slice(-1);
+        const sinais = ['+', '-', '*', '/'];
+
+        if(display.value != "" && !sinais.includes(ultimoChar)) {
+            display.value += "-";
+        }
+    });
+}
+
+// Multiplicação //
+const btnMultiplicacao = document.querySelector('.multiplicacao');
+let multiplicacao = 0;
+if(btnMultiplicacao) {
+    btnMultiplicacao.addEventListener('click', ()=> {
+        const ultimoChar = display.value.slice(-1);
+        const sinais = ['+', '-', '*', '/'];
+
+        if(display.value != "" && !sinais.includes(ultimoChar)) {
+            display.value += "*";
+        }
+    });
+}
+
 
 
 
