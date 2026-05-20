@@ -1,4 +1,4 @@
-# Calculadora Neumórfica com Sistema de Temas e Motor RegEx Nativo
+# Calculadora Premium com Sistema de Temas e Motor RegEx Nativo
 
 Aplicação web moderna desenvolvida com JavaScript Puro (Vanilla JS) e CSS3 Avançado. O projeto aplica os conceitos visuais da estética do Neumorfismo Flat e se destaca pela implementação de um motor de sanitização de strings via Expressões Regulares (RegEx), suporte global a eventos de teclado físico e gerenciamento de persistência de dados no navegador.
 
