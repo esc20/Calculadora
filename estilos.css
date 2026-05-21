@@ -312,8 +312,8 @@ background-color: var(--sinais-numericos) !important;
     }
 
     .calculadora {
-        display: block; /* Mudamos para flex para centralizar o bloco todo */
-        width: 550px; /* Largura fixa para não esticar na tela toda */
+        display: block; 
+        width: 550px; 
         max-width: none;
         margin: 50px auto;
         padding: 25px;
@@ -328,7 +328,7 @@ background-color: var(--sinais-numericos) !important;
 
     #teclado {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Mantive 4 colunas para não quebrar seus grid-areas */
+        grid-template-columns: repeat(4, 1fr); 
         gap: 12px;
         width: 100%;
     }
