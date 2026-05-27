@@ -6,7 +6,8 @@ Aplicação web moderna desenvolvida com JavaScript Puro (Vanilla JS) e CSS3 Ava
 
 ## Demonstração Visual
 
-[GIF demonstrativo em desenvolvimento - Será adicionado na próxima atualização do repositório]
+![Demonstração Visual](assets/calculadora-premium.gif)
+
 
 ---
 
