@@ -11,6 +11,26 @@ Aplicação web moderna desenvolvida com JavaScript Puro (Vanilla JS) e CSS3 Ava
 
 ---
 
+---
+
+## Indicadores de Auditoria e Desempenho (Lighthouse Audit)
+
+A aplicação foi submetida à medição oficial do Google Lighthouse para avaliar o comportamento da arquitetura nativa em Vanilla JS, apresentando resultados de altíssima eficiência:
+
+### Simulação Mobile (Dispositivos Móveis)
+* **Performance (96/100)**: Carregamento quase instantâneo do teclado e do visor, reflexo de uma arquitetura leve sem dependências ou frameworks.
+* **Melhores Práticas (100/100)**: Pontuação máxima em segurança digital, conformidade com a Web API nativa e limpeza estrutural de tags.
+* **Acessibilidade (93/100)**: Zona de excelência. Mesmo sob a estética do neumorfismo de baixo contraste, o mapeamento de cliques e foco garante ótima leitura do ecossistema.
+* **SEO (90/100)**: Estrutura semântica correta para indexação simplificada em motores de busca.
+
+### Simulação Desktop (Computador)
+* **Performance (100/100)**: Pontuação máxima. Renderização e tempo de resposta imediatos ao toque físico ou pelo teclado.
+* **Melhores Práticas (100/100)**: Total conformidade estrutural e segurança de execução.
+* **Acessibilidade (93/100)**: Comportamento estável e mapeamento de interações acessíveis.
+* **SEO (90/100)**: Alinhamento pleno com as diretrizes de busca.
+
+---
+
 ## Diferenciais Técnicos e Engenharia de Software
 
 O desenvolvimento desta aplicação priorizou fundamentos sólidos de engenharia frontend e manipulação nativa da Web API, diferenciando-se de implementações básicas através dos seguintes pilares:
