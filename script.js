@@ -1,7 +1,7 @@
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
-// --- PERSISTÊNCIA DO TEMA ---
+// --- TEMA ---
 const temasalvo = localStorage.getItem('tema');
 temaEscuro(temasalvo === 'escuro');
 
@@ -12,7 +12,7 @@ function temaEscuro(tipo) {
     } else {
         body.classList.remove('escuro');
         botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    }
+    }   
 }
 
 botao.addEventListener('click', () => {
