@@ -1,83 +1,25 @@
-# Calculadora Premium com Sistema de Temas e Motor RegEx Nativo
+Calculadora Premium: Design Escandinavo e Café PremiumUma aplicação web leve desenvolvida em JavaScript Puro (Vanilla JS) e CSS3. Este foi o meu primeiro projeto prático no desenvolvimento de software. Ele reflete o início da minha jornada e a minha evolução técnica até as práticas modernas de arquitetura de código.
 
-Aplicação web moderna desenvolvida com JavaScript Puro (Vanilla JS) e CSS3 Avançado. O projeto aplica os conceitos visuais da estética do Neumorfismo Flat e se destaca pela implementação de um motor de sanitização de strings via Expressões Regulares (RegEx), suporte global a eventos de teclado físico e gerenciamento de persistência de dados no navegador.
-
----
-
-## Demonstração Visual
+--- 
+Demonstração Visual:
 
 ![Demonstração Visual](assets/calculadora-premium.gif)
 
+--- 
+Identidade Visual e TemasO projeto foge dos padrões comuns e traz duas estéticas visuais elegantes:Tema Claro (Escandinavo): Cores neutras, limpas e minimalistas. Elas focam no conforto visual e na simplicidade das formas.Tema Escuro (Café Premium): Tons ricos e profundos inspirados na cultura do café. Oferece alta elegância para uso em ambientes de pouca luz.
 
----
+--- 
+O Orgulho da Evolução (Nota sobre Engenharia)Como este foi o meu primeiro projeto, eu fiz escolhas de código típicas de quem estava começando. Eu decidi manter esses detalhes de propósito no repositório. Eles servem para documentar a minha evolução real como desenvolvedor.O "Erro" do !important: No início, usei o recurso !important no CSS para forçar o encaixe das bordas do teclado. Hoje, compreendo que isso quebra a cascata natural de estilização e dificulta a manutenção do sistema.A Solução Moderna: Atualmente, eu sei que a abordagem correta e sênior seria usar a propriedade grid-template-areas. Com ela, desenhamos o mapa das teclas por extenso direto no CSS do elemento pai. Isso elimina códigos repetidos e deixa a manutenção simples.
 
----
+--- 
+Desempenho Real (Google Lighthouse)A aplicação foi testada pelo Google Lighthouse. Os resultados comprovam a leveza de construir softwares sem o peso de frameworks:Performance (100/100): Resposta imediata aos cliques. O carregamento é instantâneo no computador e no celular.Melhores Práticas (100/100): Código limpo, seguro e em conformidade com as regras modernas da web.Acessibilidade (93/100): Ótima leitura de contraste e mapeamento estável de elementos na tela.
 
-## Indicadores de Auditoria e Desempenho (Lighthouse Audit)
+--- 
+Funcionalidades e Recursos TécnicosMesmo sendo o meu primeiro projeto, busquei aplicar conceitos importantes de comportamento e experiência do usuário:Filtro contra Sinais Duplicados: O sistema analisa o último caractere digitado. Ele impede que o usuário digite dois operadores juntos (como ++ ou /*), evitando erros de conta.Teclado Físico Integrado: Captura os eventos de digitação do computador (keydown). O teclado físico simula o clique do botão da tela de forma automática, economizando código.Auto-fechamento de Parênteses: Uma inteligência que conta os parênteses do visor usando Expressões Regulares (RegEx). Se o usuário esquecer de fechar a conta, o sistema corrige a string antes do cálculo final.Memória de Tema (LocalStorage): Salva a escolha de cor do usuário no navegador. Se o usuário fechar o site e voltar no outro dia, o tema escolhido continua ativo.Tratamento de Erros (try/catch): Se alguma conta inválida passar pelas travas, o sistema não trava o navegador. O erro é capturado e a palavra "Erro" aparece de forma amigável na tela.
 
-A aplicação foi submetida à medição oficial do Google Lighthouse para avaliar o comportamento da arquitetura nativa em Vanilla JS, apresentando resultados de altíssima eficiência:
+--- 
+Como Executar o ProjetoPor ser um projeto feito puramente com tecnologias nativas da web, ele não precisa de nenhuma instalação ou servidor:Baixe ou clone este repositório.Dê um duplo clique no arquivo index.html.O projeto abrirá imediatamente no seu navegador de internet.
 
-### Simulação Mobile (Dispositivos Móveis)
-* **Performance (96/100)**: Carregamento quase instantâneo do teclado e do visor, reflexo de uma arquitetura leve sem dependências ou frameworks.
-* **Melhores Práticas (100/100)**: Pontuação máxima em segurança digital, conformidade com a Web API nativa e limpeza estrutural de tags.
-* **Acessibilidade (93/100)**: Zona de excelência. Mesmo sob a estética do neumorfismo de baixo contraste, o mapeamento de cliques e foco garante ótima leitura do ecossistema.
-* **SEO (90/100)**: Estrutura semântica correta para indexação simplificada em motores de busca.
 
-### Simulação Desktop (Computador)
-* **Performance (100/100)**: Pontuação máxima. Renderização e tempo de resposta imediatos ao toque físico ou pelo teclado.
-* **Melhores Práticas (100/100)**: Total conformidade estrutural e segurança de execução.
-* **Acessibilidade (93/100)**: Comportamento estável e mapeamento de interações acessíveis.
-* **SEO (90/100)**: Alinhamento pleno com as diretrizes de busca.
 
----
 
-## Diferenciais Técnicos e Engenharia de Software
-
-O desenvolvimento desta aplicação priorizou fundamentos sólidos de engenharia frontend e manipulação nativa da Web API, diferenciando-se de implementações básicas através dos seguintes pilares:
-
-* **Persistência de Estado via Local Storage**: Sistema de persistência nativo para o gerenciamento de preferências visuais. O tema escolhido pelo usuário (Light ou Dark Mode) permanece gravado no navegador, garantindo que o ecossistema inicie com a identidade visual correta mesmo após o fechamento da sessão.
-* **Sanitização de Expressões Complexas com RegEx**: Motor que intercepta e limpa caracteres puramente visuais (como X, x, vírgulas e o símbolo de divisão tradicional) e os converte, utilizando Expressões Regulares, para os operadores computacionais nativos correspondentes antes da avaliação matemática final.
-* **Auto-fechamento Dinâmico de Parênteses**: Lógica baseada em varredura que contabiliza o escopo de abertura e fechamento de blocos operacionais. Caso o usuário finalize uma inserção sem fechar os parênteses pendentes, o sistema injeta os caracteres faltantes no final da string automaticamente via código, prevenindo erros de execução.
-* **Prevenção de Injeção de Sinais Duplicados**: Validação baseada na análise do último caractere digitado no fluxo. Impede de forma nativa que o usuário insira múltiplos sinais aritméticos em sequência (como dois sinais de adição ou operadores conflitantes), blindando o sistema contra erros de sintaxe matemática antes que eles atinjam o interpretador.
-* **Acessibilidade Dinâmica via Teclado Físico**: Interceptação de eventos globais do teclado através do evento keydown. O sistema bloqueia o comportamento padrão de teclas do sistema (como o Enter), redireciona as entradas para emular mecanicamente o clique dos botões e oferece atalhos rápidos para comandos de correção (Backspace) e limpeza total (Escape).
-
----
-
-## Tecnologias e Recursos Utilizados
-
-* **HTML5**: Estruturação semântica de displays protegidos contra edição direta através do atributo readonly.
-* **CSS3 Avançado**: Uso estrito de variáveis nativas (:root), layouts bidimensionais estruturados com CSS Grid e Media Queries focadas no comportamento Mobile-First e Desktop.
-* **JavaScript (ES6+)**: Manipulação de DOM via addEventListener, controle de propagação de eventos no navegador e tratamento de exceções estruturado em blocos try/catch.
-* **Font Awesome**: Biblioteca de ícones vetoriais dinâmicos para a interface de troca de temas.
-
----
-
-## Fluxo Interno de Tratamento de Expressões
-
-O núcleo do interpretador computa e formata as strings de entrada através de uma esteira sequencial de tratamento:
-1. Remoção de espaçamentos periféricos vazios utilizando o método .trim()
-2. Cálculo e injeção automática de escopos pendentes.
-3. Substituição e normalização de símbolos aritméticos e pontuações decimais.
-4. Processamento de formatação de porcentagens encadeadas.
-5. Expansão e remoção de operadores órfãos no fechamento da linha antes da execução matemática pelo motor.
-
----
-
-## Funcionalidades Principais
-
-* **Aritmética Completa**: Suporte para o processamento de adições, subtrações, multiplicações, divisões e porcentagens encadeadas.
-* **Feedback Mecânico**: Os botões respondem visualmente alterando a profundidade do Neumorfismo de relevo externo para relevo interno (box-shadow: inset) e simulando o deslocamento físico do componente através da propriedade transform: translateY.
-* **Controle de Escopo Dinâmico**: Inserção inteligente de parênteses com base na análise contextual do último caractere inserido.
-* **Layout Responsivo**: Ajuste automático da malha do teclado, transitando de uma visualização otimizada para smartphones (95vw) para dimensões fixas em telas desktops (550px).
-
----
-
-## Instruções para Execução do Projeto
-
-A aplicação utiliza uma arquitetura puramente Vanilla, dispensando a necessidade de instaladores, servidores locais ou gerenciadores de dependência:
-
-1. Clone o repositório utilizando o comando:
-   ```bash
-   git clone https://github.com
-   ```
-2. Navegue até o diretório do projeto e execute o arquivo `index.html` com um duplo clique para abri-lo diretamente em seu navegador.
