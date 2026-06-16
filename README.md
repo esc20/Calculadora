@@ -21,15 +21,15 @@ O projeto foge dos padrões comuns e traz duas estéticas visuais elegantes:
 ---
 
 ### O ORGULHO DA EVOLUÇÃO
-#### Nota sobre Engenharia de Software
+#### Nota sobre Aprendizado e Engenharia de Software
 
-> Como este foi o meu primeiro projeto, eu fiz escolhas de código típicas de quem estava começando. Eu decidi manter esses detalhes de propósito no repositório. Eles servem para documentar a minha evolução real como desenvolvedor.
+> Como este foi o meu primeiro projeto no mundo do desenvolvimento, eu ainda não conhecia todas as ferramentas e cometi alguns erros típicos de quem está começando. Eu decidi manter esses detalhes de propósito no repositório para documentar a minha evolução real como desenvolvedor.
 
-*   **O "Erro" do `!important`**
-    No início, usei o recurso `!important` no CSS para forçar o encaixe das bordas do teclado. Hoje, compreendo que isso quebra a cascata natural de estilização e dificulta a manutenção do sistema.
+*   **O uso do `!important` no CSS**
+    No início, usei o recurso `!important` no código para forçar as bordas e os tamanhos das teclas do teclado a se encaixarem. Hoje, compreendo que isso é uma prática ruim porque quebra a cascata natural do CSS e deixa a manutenção do sistema muito difícil.
 
-*   **A Solução Moderna**
-    Atualmente, eu sei que a abordagem correta e sênior seria usar a propriedade `grid-template-areas`. Com ela, desenhamos o mapa das teclas por extenso direto no CSS do elemento pai. Isso elimina códigos repetidos e deixa a manutenção simples.
+*   **A Solução Moderna que Aprendi**
+    Com o conhecimento que tenho hoje, sei que a abordagem correta e profissional seria usar a propriedade `grid-template-areas`. Com ela, nós desenhamos o mapa das teclas por extenso direto no CSS do elemento pai. Isso elimina gambiarras, reduz linhas de código e deixa o layout limpo.
 
 ---
 
