@@ -20,7 +20,7 @@ O projeto foge dos padrões comuns e traz duas estéticas visuais elegantes:
 
 ---
 
-### O ORGULHO DA EVOLUÇÃO
+### EVOLUÇÃO
 #### Nota sobre Aprendizado e Engenharia de Software
 
 > Como este foi o meu primeiro projeto no mundo do desenvolvimento, eu ainda não conhecia todas as ferramentas e cometi alguns erros típicos de quem está começando. Eu decidi manter esses detalhes de propósito no repositório para documentar a minha evolução real como desenvolvedor.
