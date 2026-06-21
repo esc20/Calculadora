@@ -65,10 +65,6 @@ Mesmo sendo o meu primeiro projeto, busquei aplicar conceitos importantes de com
 
 ---
 
-### COMO EXECUTAR O PROJETO
+### SITE CALCULADORA PREMIUM
 
-Por ser um projeto feito puramente com tecnologias nativas da web, ele não precisa de nenhuma instalação ou servidor:
-
-1.  Baixe ou clone este repositório.
-2.  Dê um duplo clique no arquivo `index.html`.
-3.  O projeto abrirá imediatamente no seu navegador de internet.
+[Clique aqui para acessar o projeto online](https://calculadora-premium-one.vercel.app/#)
